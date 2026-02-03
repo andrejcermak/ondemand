@@ -15,7 +15,7 @@ RUN dnf -y update && \
 RUN /usr/libexec/httpd-ssl-gencerts
 
 # Copy your custom config file
-COPY ood_portal.yml /etc/ood/config/ood_portal.yml
+COPY config/ood_portal.yml /etc/ood/config/ood_portal.yml
 
 # Run the update script
 RUN /opt/ood/ood-portal-generator/sbin/update_ood_portal
